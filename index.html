@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Am I Secure?</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="bootstrap/js/bootstrap-fileupload.min.js"></script>
+        <style>
+            .vulnerable {background-color: red;}
+            .safe {background-color: green;}
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="bootstrap/css/bootstrap-fileupload.min.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        <div class='container'>
+            <div class='hero-unit'>
+                <h1>Am I Secure?</h1>
+                <p>After all the recent Rails security problems recently this page tries to keep track
+                of which vulnerabilities you may or may not be vulnerable to by checking your Gemfile.lock.</p>
+
+                <p>Your Gemfile.lock will not be uploaded. All the analysis is done in
+                your own browser using JavaScript. A modern browser is required.</p>
+            </div>
+
+            <div class="fileupload fileupload-new" data-provides="fileupload">
+                <div class="input-append">
+                    <div class="uneditable-input span3">
+                        <i class="icon-file fileupload-exists"></i>
+                        <span class="fileupload-preview"></span>
+                    </div>
+                    <span class="btn btn-file">
+                        <span class="fileupload-new">Select file</span>
+                        <span class="fileupload-exists">Change</span>
+                        <input type="file" id='file-input' />
+                    </span>
+                    <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+                </div>
+            </div>
+
+            <p id='error_msg'></p>
+
+            <table class='table'>
+                <tr><th>Vulnerability</th><th>At Risk?</th><th>More Info</th></tr>
+                <tr><td>Rack CVE-2013-0263/0262</td><td class='exploit' data_exploit='rack'></td><td><a href='https://support.cloud.engineyard.com/entries/23128893-February-8-2013-Rack-Vulnerabilities-CVE-2013-0263-CVE-2013-0262'>Click here</a></td></tr>
+                <tr><td>JSON gem CVE-2013-0269</td><td class='exploit' data_exploit='json'></td><td><a href='https://groups.google.com/forum/?fromgroups=#!topic/rubyonrails-security/4_YvCpLzL58'>Click here</a></td></tr>
+            </table>
+        </div>
+
+        <script>
+            function handleFileUpload(evt) {
+                var f = evt.target.files[0];
+
+                if (f.name === 'Gemfile.lock') {
+                    $('#error_msg').hide;
+                    var reader = new FileReader();
+                    reader.readAsText(f);
+                    reader.onload = function(evt) {
+                        var file = evt.target.result;
+                        checkExploits(file);
+                    };
+                } else {
+                    $('#error_msg').html("You need to upload a Gemfile.lock, sorry.").show;
+                }
+            }
+
+            function checkExploits(file) {
+                $('.exploit').each(function(idx, exploit) {
+                    var exploit = $(exploit);
+                    var name = exploit.attr('data_exploit');
+                    console.log("Checking exploit: " + name);
+                    var vulnerable = vulnerabilities[name](file);
+                    if (vulnerable) {
+                        exploit.parent().removeClass().addClass('error');
+                        exploit.html('BAD');
+                    } else {
+                        exploit.parent().removeClass().addClass('success');
+                        exploit.html('OK');
+                    }
+                });
+            }
+
+            vulnerabilities = {
+                rack: function(file){
+                    var match_rack_version = /\brack\s*\(([0-9\.]+)\)/;
+                    var matches = file.match(match_rack_version);
+                    var vulnerable = null;
+                    if (matches != null) {
+                        var v = matches[1].split('.');
+                        if ((v[1] == 4 && v[2] < 5) || (v[1] == 5 && v[2] < 5) || (v[1] == 1 && v[2] < 6) || (v[1] == 2 && v[2] < 8) || (v[1] == 3 && v[2] < 10)) {
+                            vulnerable = true;
+                        } else {
+                            vulnerable = false;
+                        }
+                    }
+                    return vulnerable;
+                },
+                json: function(file){
+                    // fixed in 1.7.7, 1.6.8, 1.5.5
+                    var match_json_version = /\bjson\s*\(([0-9\.]+)\)/;
+                    var matches = file.match(match_json_version);
+                    var vulnerable = false;
+                    if (matches != null) {
+                        var v = matches[1].split('.');
+                        if ((v[1] === 7 && v[2] < 7) || (v[1] === 6 && v[2] < 8) || (v[1] === 5 && v[2] < 5)) {
+                            vulnerable = true;
+                        }
+                    }
+                    return vulnerable;
+                }
+            }
+
+            if (window.File && window.FileReader && window.FileList) {
+                // should work
+                document.getElementById('file-input').addEventListener('change', handleFileUpload, false);
+            } else {
+                $('#error_msg').html("Sorry, your browser isn't modern enough.").show;
+            }
+        </script>
+    </body>
+</html>

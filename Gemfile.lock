@@ -1,0 +1,523 @@
+GIT
+  remote: git://github.com/HHRy/ruby-saml.git
+  revision: d54c08b4cdfda8a6c3ef82f9810df2331ef4ad55
+  specs:
+    ruby-saml (0.4.7)
+      canonix (~> 0.1)
+      uuid (~> 2.3)
+
+GIT
+  remote: git://github.com/fac/rchardet.git
+  revision: 68bec32d5a7e7c7482bcbd7342109e6ff1fec757
+  specs:
+    edouard-rchardet (1.3.3)
+
+GIT
+  remote: git://github.com/fac/useragent.git
+  revision: f861e9b84e760f2b4d309dd2c71cdad0868ecfa6
+  specs:
+    useragent (0.2.3)
+
+GIT
+  remote: git://github.com/fac/vpim.git
+  revision: eb1e6f9449c44fe552b0cb7288b58561e52b44e9
+  specs:
+    vpim (11.6.22)
+
+GIT
+  remote: git://github.com/intridea/oauth2.git
+  revision: 75827a916f0715cd2a9e393511974f01603eacb6
+  specs:
+    oauth2 (0.7.1)
+      faraday (~> 0.8)
+      httpauth (~> 0.1)
+      jwt (~> 0.1.4)
+      multi_json (~> 1.0)
+      rack (~> 1.2)
+
+GIT
+  remote: git://github.com/ruby-amqp/bunny.git
+  revision: 5d6a2a0f101330a92e57f75a2b8459e540858f77
+  ref: 5d6a2a0f101330a92
+  specs:
+    bunny (0.8.0.pre1)
+
+GIT
+  remote: git://github.com/tekin/aws-s3.git
+  revision: b636ffb758b071a58d65e478603044c45510e08f
+  specs:
+    aws-s3 (0.6.4)
+      builder
+      mime-types
+      xml-simple
+
+GIT
+  remote: git://github.com/thedarkone/rails-dev-boost.git
+  revision: a995f0a3734ecf36da74dcce32ed2ba74e25c56d
+  specs:
+    rails-dev-boost (0.1.1)
+
+GIT
+  remote: git@github.com:fac/banksy-client
+  revision: 3db311f134743d290d0b39a614ec500efbe732ec
+  specs:
+    banksy-client (0.10.0)
+      faraday
+      faraday_middleware
+
+GIT
+  remote: git@github.com:fac/country-select.git
+  revision: 77226aee38308114e6831afca0be01903aaeeff7
+  specs:
+    country-select (1.1.1)
+
+GIT
+  remote: git@github.com:fac/date-range-hash.git
+  revision: 80195c185abe0c42c1c555b5975e0a743fcc8d2d
+  specs:
+    date-range-hash (1.0.0)
+
+GIT
+  remote: git@github.com:fac/freeagent-accounting-engine.git
+  revision: d6df145e11f3b6952be0b951deb756de428c3530
+  ref: d6df145e11f3b6952be0b951deb756de428c3530
+  specs:
+    freeagent-accounting-engine (1.1.0)
+      airbrake
+      date-range-hash (~> 1.0.0)
+      rails (~> 3.0.9)
+
+GIT
+  remote: git@github.com:fac/freeagent-api-view.git
+  revision: 29425640df4ce66ef3300702f44970ae207ad6b3
+  specs:
+    freeagent-api-view (0.0.4)
+      activesupport (~> 3.0.5)
+
+GIT
+  remote: git@github.com:fac/freeagent-exchange-rate.git
+  revision: 49cc5ed0e86e494ce7ef399070057921cedea432
+  specs:
+    freeagent-exchange-rate (1.0.1)
+      libxml-ruby
+      rails (~> 3.0.9)
+
+GIT
+  remote: git@github.com:fac/freeagent-parallel-runner
+  revision: 9ead83377a86ba58d1bede4fa6d2625a85164f22
+  specs:
+    freeagent-parallel-runner (1.1.0)
+      test-unit (~> 1.2.3)
+
+GIT
+  remote: git@github.com:fac/mobile-fu.git
+  revision: d442479212838ae7e95543774b16b711d5ace0b6
+  specs:
+    mobile-fu (1.1.0)
+      rack-mobile-detect
+      rails
+
+GIT
+  remote: git@github.com:fac/sa-calculator.git
+  revision: 95c26f0b9104f3dfbd09bf86e9a00eb08d8f63ce
+  specs:
+    sa-calculator (0.0.12)
+
+GIT
+  remote: git@github.com:fac/scrooge.git
+  revision: 69de28c9351b97cfa9f9e433b161f6e62c1f5f2d
+  specs:
+    scrooge (0.0.2)
+      daemons (~> 1.1.8)
+      mysql2 (~> 0.2.18)
+
+GIT
+  remote: git@github.com:fac/teller.git
+  revision: 797b314ae090679a53d1aa88bce7152c8b00c708
+  specs:
+    teller (1.1.11)
+      json
+      log4r
+      multi_json (~> 1.3.0)
+
+GEM
+  remote: http://rubygems.org/
+  remote: http://gems.github.com/
+  specs:
+    abstract (1.0.0)
+    actionmailer (3.0.20)
+      actionpack (= 3.0.20)
+      mail (~> 2.2.19)
+    actionpack (3.0.20)
+      activemodel (= 3.0.20)
+      activesupport (= 3.0.20)
+      builder (~> 2.1.2)
+      erubis (~> 2.6.6)
+      i18n (~> 0.5.0)
+      rack (~> 1.2.5)
+      rack-mount (~> 0.6.14)
+      rack-test (~> 0.5.7)
+      tzinfo (~> 0.3.23)
+    active_utils (1.0.3)
+      activesupport (>= 2.3.11)
+      i18n
+    activemerchant (1.21.0)
+      active_utils (>= 1.0.2)
+      activesupport (>= 2.3.11)
+      builder (>= 2.0.0)
+      i18n
+      json (>= 1.5.1)
+      money (<= 3.7.1)
+    activemodel (3.0.20)
+      activesupport (= 3.0.20)
+      builder (~> 2.1.2)
+      i18n (~> 0.5.0)
+    activerecord (3.0.20)
+      activemodel (= 3.0.20)
+      activesupport (= 3.0.20)
+      arel (~> 2.0.10)
+      tzinfo (~> 0.3.23)
+    activeresource (3.0.20)
+      activemodel (= 3.0.20)
+      activesupport (= 3.0.20)
+    activesupport (3.0.20)
+    acts_as_audited (2.0.0.rc7)
+      rails (>= 3.0.3)
+    addressable (2.2.7)
+    airbrake (3.1.2)
+      activesupport
+      builder
+    ansi (1.4.2)
+    arel (2.0.10)
+    base32 (0.2.0)
+    builder (2.1.2)
+    canonix (0.1.5)
+    capistrano (2.12.0)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
+    capistrano-ext (1.2.1)
+      capistrano (>= 1.0.0)
+    capybara (1.1.2)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      selenium-webdriver (~> 2.0)
+      xpath (~> 0.1.4)
+    capybara-webkit (0.11.0)
+      capybara (>= 1.0.0, < 1.2)
+      json
+    childprocess (0.3.2)
+      ffi (~> 1.0.6)
+    chronic (0.6.7)
+    coderay (1.0.6)
+    columnize (0.3.6)
+    createsend (1.0.3)
+      hashie (~> 1.0)
+      httparty (~> 0.8)
+      json
+    daemons (1.1.8)
+    dalli (2.0.3)
+    date_validator (0.6.3)
+      activemodel (~> 3.0)
+    debugger (1.3.0)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.1.1)
+      debugger-ruby_core_source (~> 1.1.7)
+    debugger-linecache (1.1.2)
+      debugger-ruby_core_source (>= 1.1.1)
+    debugger-ruby_core_source (1.1.7)
+    declarative_authorization (0.5.5)
+    delayed_job (3.0.2)
+      activesupport (~> 3.0)
+    delayed_job_active_record (0.3.2)
+      activerecord (> 2.1.0)
+      delayed_job (~> 3.0.0)
+    diff-lcs (1.1.3)
+    dynamic_form (1.1.4)
+    encryptor (1.1.3)
+    erubis (2.6.6)
+      abstract (>= 1.0.0)
+    escape (0.0.4)
+    factory_girl (1.3.3)
+    faker (1.0.1)
+      i18n (~> 0.4)
+    fakeweb (1.3.0)
+    faraday (0.8.4)
+      multipart-post (~> 1.1)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
+    ffi (1.0.11)
+    flexmock (0.9.0)
+    foreigner (1.1.6)
+      activerecord (>= 3.0.0)
+    foreman (0.57.0)
+      thor (>= 0.13.6)
+    formtastic (1.2.4)
+      actionpack (>= 2.3.7)
+      activesupport (>= 2.3.7)
+      i18n (~> 0.4)
+    gocardless (1.2.0)
+      multi_json (~> 1.0)
+      oauth2 (~> 0.7.1)
+    guard (1.3.2)
+      listen (>= 0.4.2)
+      thor (>= 0.14.6)
+    guard-shell (0.4.0)
+      guard (>= 0.2.0)
+    guard-spin (0.1.4)
+      guard
+      spin
+    hashie (1.2.0)
+    highline (1.6.11)
+    hoe (3.4.0)
+      rake (>= 0.8, < 11.0)
+    htmlentities (4.3.1)
+    httparty (0.8.3)
+      multi_json (~> 1.0)
+      multi_xml
+    httpauth (0.1)
+    i18n (0.5.0)
+    icalendar (1.1.6)
+    jasmine (1.1.2)
+      jasmine-core (>= 1.1.0)
+      rack (>= 1.1)
+      rspec (>= 1.3.1)
+      selenium-webdriver (>= 0.1.3)
+    jasmine-core (1.1.0)
+    jquery-rails (1.0.19)
+      railties (~> 3.0)
+      thor (~> 0.14)
+    json (1.7.3)
+    jwt (0.1.4)
+      json (>= 1.2.4)
+    kgio (2.7.4)
+    libwebsocket (0.1.3)
+      addressable
+    libxml-ruby (2.3.2)
+    listen (0.4.7)
+      rb-fchange (~> 0.0.5)
+      rb-fsevent (~> 0.9.1)
+      rb-inotify (~> 0.8.8)
+    log4r (1.1.10)
+    macaddr (1.5.0)
+      systemu (>= 2.4.0)
+    mail (2.2.19)
+      activesupport (>= 2.3.6)
+      i18n (>= 0.4.0)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    method_source (0.7.1)
+    mime-types (1.19)
+    mimetype-fu (0.1.2)
+    money (2.2.0)
+    multi_json (1.3.6)
+    multi_xml (0.4.4)
+    multipart-post (1.1.5)
+    mysql2 (0.2.18)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-sftp (2.0.5)
+      net-ssh (>= 2.0.9)
+    net-ssh (2.3.0)
+    net-ssh-gateway (1.1.0)
+      net-ssh (>= 1.99.1)
+    newrelic_rpm (3.5.3.25)
+    nokogiri (1.5.2)
+    oauth (0.4.6)
+    paperclip (2.3.11)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
+    paypal_nvp (0.2.4)
+    polyglot (0.3.3)
+    pry (0.9.9.4)
+      coderay (~> 1.0.5)
+      method_source (~> 0.7.1)
+      slop (>= 2.4.4, < 3)
+    pry-rails (0.1.6)
+      pry
+    rack (1.2.3)
+    rack-mobile-detect (0.4.0)
+      rack
+    rack-mount (0.6.14)
+      rack (>= 1.0.0)
+    rack-openid (1.3.1)
+      rack (>= 1.1.0)
+      ruby-openid (>= 2.1.8)
+    rack-test (0.5.7)
+      rack (>= 1.0)
+    rails (3.0.20)
+      actionmailer (= 3.0.20)
+      actionpack (= 3.0.20)
+      activerecord (= 3.0.20)
+      activeresource (= 3.0.20)
+      activesupport (= 3.0.20)
+      bundler (~> 1.0)
+      railties (= 3.0.20)
+    railties (3.0.20)
+      actionpack (= 3.0.20)
+      activesupport (= 3.0.20)
+      rake (>= 0.8.7)
+      rdoc (~> 3.4)
+      thor (~> 0.14.4)
+    raindrops (0.8.0)
+    rake (10.0.3)
+    rb-fchange (0.0.6)
+      ffi
+    rb-fsevent (0.9.1)
+    rb-inotify (0.8.8)
+      ffi (>= 0.5.0)
+    rdoc (3.12)
+      json (~> 1.4)
+    remotipart (1.0.2)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    rspec (2.9.0)
+      rspec-core (~> 2.9.0)
+      rspec-expectations (~> 2.9.0)
+      rspec-mocks (~> 2.9.0)
+    rspec-core (2.9.0)
+    rspec-expectations (2.9.1)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.9.0)
+    ruby-ole (1.2.11.3)
+    ruby-openid (2.1.8)
+    ruby-openid-apps-discovery (1.2.0)
+      ruby-openid (>= 2.1.7)
+    ruby-prof (0.10.8)
+    rubyzip (0.9.8)
+    selenium-webdriver (2.21.2)
+      childprocess (>= 0.2.5)
+      ffi (~> 1.0)
+      libwebsocket (~> 0.1.3)
+      multi_json (~> 1.0)
+      rubyzip
+    shoulda-context (1.0.0)
+    shoulda-matchers (1.1.0)
+    simplecov (0.6.2)
+      multi_json (~> 1.3)
+      simplecov-html (~> 0.5.3)
+    simplecov-html (0.5.3)
+    slop (2.4.4)
+    spin (0.4.5)
+    spreadsheet (0.6.8)
+      ruby-ole (>= 1.0)
+    state_machine (1.1.2)
+    systemu (2.5.0)
+    test-unit (1.2.3)
+      hoe (>= 1.5.1)
+    thor (0.14.6)
+    timecop (0.3.5)
+    treetop (1.4.12)
+      polyglot
+      polyglot (>= 0.3.1)
+    turn (0.9.5)
+      ansi
+    tzinfo (0.3.35)
+    unicorn (4.3.0)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
+    uuid (2.3.5)
+      macaddr (~> 1.0)
+    validation_reflection (1.0.0)
+    whenever (0.7.3)
+      activesupport (>= 2.3.4)
+      chronic (~> 0.6.3)
+    will_paginate (3.0.pre2)
+    xml-simple (1.1.1)
+    xpath (0.1.4)
+      nokogiri (~> 1.3)
+    yajl-ruby (1.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activemerchant
+  acts_as_audited (= 2.0.0.rc7)
+  airbrake (~> 3.1.2)
+  aws-s3!
+  banksy-client (= 0.10.0)!
+  base32
+  bunny (~> 0.8.0.pre1)!
+  capistrano
+  capistrano-ext
+  capybara
+  capybara-webkit
+  country-select (= 1.1.1)!
+  createsend
+  dalli
+  date-range-hash (~> 1.0.0)!
+  date_validator
+  debugger
+  declarative_authorization
+  delayed_job_active_record
+  dynamic_form
+  edouard-rchardet!
+  encryptor
+  escape
+  factory_girl
+  faker
+  fakeweb
+  flexmock
+  foreigner
+  foreman
+  formtastic
+  freeagent-accounting-engine (~> 1.1.0)!
+  freeagent-api-view (~> 0.0.4)!
+  freeagent-exchange-rate (~> 1.0.1)!
+  freeagent-parallel-runner (~> 1.1.0)!
+  gocardless (>= 1.2.0)
+  guard-shell
+  guard-spin
+  htmlentities
+  httparty
+  icalendar
+  jasmine
+  jquery-rails (>= 0.2.6)
+  json (= 1.7.3)
+  libxml-ruby
+  listen (~> 0.4.7)
+  mimetype-fu
+  mobile-fu (= 1.1.0)!
+  money (= 2.2.0)
+  mysql2 (~> 0.2.7)
+  newrelic_rpm
+  oauth
+  oauth2!
+  paperclip (= 2.3.11)
+  paypal_nvp
+  pry-rails
+  rack (~> 1.2.8)
+  rack-openid
+  rails (= 3.0.20)
+  rails-dev-boost!
+  rake
+  remotipart (~> 1.0)
+  rest-client
+  ruby-openid-apps-discovery
+  ruby-prof
+  ruby-saml!
+  rubyzip
+  sa-calculator (~> 0.0.12)!
+  scrooge (~> 0.0.2)!
+  shoulda-context
+  shoulda-matchers (>= 1.1.0)
+  simplecov
+  spin
+  spreadsheet
+  state_machine
+  teller (~> 1.1.11)!
+  timecop
+  turn
+  unicorn
+  useragent!
+  validation_reflection
+  vpim!
+  whenever
+  will_paginate (= 3.0.pre2)
+  yajl-ruby (= 1.1.0)
