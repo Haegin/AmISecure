@@ -80,6 +80,11 @@
                     <td class='exploit' data_exploit='rails_0277'></td>
                     <td><a href='https://groups.google.com/forum/?fromgroups=#!topic/rubyonrails-security/KtmwSbEpzrU' target='_blank'>Click here</a></td>
                 </tr>
+                <tr>
+                    <td>Rails CVE-2012-5664</td>
+                    <td class='exploit' data_exploit='rails_5664'></td>
+                    <td><a href='https://groups.google.com/forum/?fromgroups=#!topic/rubyonrails-security/DCNTNp_qjFM' target='_blank'>Click here</a></td>
+                </tr>
             </table>
         </div>
 
@@ -194,6 +199,18 @@
                     if (matches != null) {
                         var v = matches[1].split('.');
                         if ((v[0] == 3 && v[1] >= 0) || (v[0] == 2 && (v[1] >= 0 || v[2] >= 17))) {
+                            vulnerable = false;
+                        }
+                    }
+                    return vulnerable;
+                },
+                rails_5664: function(file){
+                    var match_version = /\srails\s*\(([0-9\.]+)\)/;
+                    var matches = file.match(match_version);
+                    var vulnerable = true;
+                    if (matches != null) {
+                        var v = matches[1].split('.');
+                        if (v[0] == 3 && ((v[1] == 1 && v[2] >= 9) || (v[1] == 0 && v[2] >= 18))) {
                             vulnerable = false;
                         }
                     }
