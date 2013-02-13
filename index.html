@@ -181,7 +181,7 @@
                 },
                 rails_0333: function(file){
                     var match_version = /\srails\s*\(([0-9\.]+)\)/;
-                    var has_yajl = /\syajl\s*\(([0-9\.]+)\)/.test(file);
+                    var has_yajl = /\syajl-ruby\s*\(([0-9\.]+)\)/.test(file);
                     var matches = file.match(match_version);
                     var vulnerable = true;
                     if (matches != null) {
