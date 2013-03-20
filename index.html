@@ -210,7 +210,7 @@
                             vulnerable = false;
                         }
                     }
-                    return (vulnerable || has_yajl);
+                    return (vulnerable && !has_yajl);
                 },
                 rails_0277: function(file){
                     var match_version = /\srails\s*\(([0-9\.]+)\)/;
