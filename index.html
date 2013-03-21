@@ -230,7 +230,7 @@
                     var vulnerable = true;
                     if (matches != null) {
                         var v = matches[1].split('.');
-                        if (v[0] == 3 && ((v[1] == 1 && v[2] >= 9) || (v[1] == 0 && v[2] >= 18))) {
+                        if (v[0] == 3 && ((v[1] == 1 && v[2] >= 9) || (v[1] == 0 && v[2] >= 18) || (v[1] == 2 && v[2] >= 10))) {
                             vulnerable = false;
                         }
                     }
